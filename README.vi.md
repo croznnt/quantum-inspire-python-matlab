@@ -19,6 +19,20 @@ Chưa chạy benchmark, kiểm thử tương thích gói hoặc tái lập kết
 
 **Đi nhanh:** [Bài báo](papers/README.vi.md) · [Hướng dẫn nghiên cứu](docs/RESEARCH_GUIDE.vi.md) · [MATLAB](docs/MATLAB.md) · [Quantum Inspire](docs/QUANTUM_INSPIRE.vi.md) · [Catalog](catalog/repositories.csv)
 
+## 🧭 Chọn theo nhu cầu
+
+| Nhu cầu | Trang chi tiết | Bài báo liên quan |
+| :--- | :--- | :--- |
+| Mô phỏng động lực học | [QuTiP](repositories/qutip.md) | [P03](papers/profiles/P03.md) |
+| Tối ưu xung theo lưới thời gian | [qutip-qtrl](repositories/qtrl.md) | [GRAPE, P04](papers/profiles/P04.md) |
+| Cập nhật trường tuần tự | [Krotov](repositories/krotov.md) | [P05](papers/profiles/P05.md) |
+| Xung tham số hóa trơn | [qutip-qoc](repositories/qoc.md) | [GOAT, P08](papers/profiles/P08.md) |
+| Hàm mục tiêu tùy biến hoặc dCRAB | [QuOCS](repositories/quocs.md) | [P10](papers/profiles/P10.md) |
+| MATLAB cho hệ spin | [Spinach](repositories/spinach.md) | [P11](papers/profiles/P11.md) |
+| Phản hồi theo phép đo | [P14](papers/profiles/P14.md) | [Hướng dẫn nghiên cứu](docs/RESEARCH_GUIDE.vi.md) |
+
+Xem đủ [19 trang repo](repositories/README.md) và [14 trang paper](papers/PROFILES.md). Các trang chi tiết hiện viết bằng tiếng Anh, gồm mục đích, hướng thực hành, điều cần kiểm tra, giới hạn và quan hệ giữa mã với bài báo. Bài thực hành là đề xuất biên tập, chưa được chạy hoặc xác nhận tái lập.
+
 ## 🧰 Chọn công cụ
 
 | Công cụ | Ngôn ngữ | Vai trò | Bài tham chiếu |

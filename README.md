@@ -19,6 +19,21 @@ Counts describe this catalog, not all available resources. Source descriptions w
 
 **Explore:** [Papers](papers/README.md) · [Research guide](docs/RESEARCH_GUIDE.md) · [MATLAB](docs/MATLAB.en.md) · [Quantum Inspire](docs/QUANTUM_INSPIRE.en.md)
 
+## 🧭 Find the right resource
+
+| I want to… | Start here | Then explore |
+| :--- | :--- | :--- |
+| Simulate controlled quantum dynamics | [QuTiP profile](repositories/qutip.md) | [Simulation paper P03](papers/profiles/P03.md) |
+| Optimize a time-discretized pulse | [qutip-qtrl profile](repositories/qtrl.md) | [GRAPE paper P04](papers/profiles/P04.md) |
+| Compare sequential control updates | [Krotov profile](repositories/krotov.md) | [Krotov paper P05](papers/profiles/P05.md) |
+| Design smooth parameterized pulses | [qutip-qoc profile](repositories/qoc.md) | [GOAT paper P08](papers/profiles/P08.md) |
+| Use a custom objective or dCRAB | [QuOCS profile](repositories/quocs.md) | [QuOCS paper P10](papers/profiles/P10.md) |
+| Use MATLAB for spin control | [Spinach profile](repositories/spinach.md) | [Spinach paper P11](papers/profiles/P11.md) |
+| Study continuous measurement feedback | [Feedback paper P14](papers/profiles/P14.md) | [Research guide](docs/RESEARCH_GUIDE.md) |
+| Browse everything with descriptions | [19 repository profiles](repositories/README.md) | [14 paper profiles](papers/PROFILES.md) |
+
+Each repository profile covers **purpose, first exercise, checks, limitations and related literature**. Each paper profile covers **reading question, method focus, code relationship, follow-up exercise and reproduction status**. Suggested exercises are editorial guidance, not tested examples or reproduced paper results.
+
 ## 🎯 Research scope
 
 The workflow is **physical model → reliable propagation → objective and constraints → pulse optimization → independent validation**. The focus is classical numerical simulation of controlled quantum systems. Circuit submission and platform integration are supporting topics.

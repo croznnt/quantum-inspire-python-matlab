@@ -2,6 +2,8 @@
 
 [English](README.md) · [Trang chính tiếng Việt](../README.vi.md)
 
+Xem [14 trang paper chi tiết](PROFILES.md) và [19 trang repo chi tiết](../repositories/README.md). Trang chi tiết dùng tiếng Anh, bổ sung câu hỏi đọc, nội dung cần rút ra, liên hệ với mã nguồn, bài thực hành đề xuất và giới hạn diễn giải.
+
 Khảo sát ngày 15 tháng 10 năm 2026. Danh mục gồm 14 bài, là tuyển chọn khởi đầu cho nghiên cứu, chưa phải tổng quan hệ thống. Tên bài và liên kết nguồn đầy đủ nằm trong [bảng tài liệu](README.md#reading-map). Năm của bản arXiv là năm tiền ấn phẩm, có thể khác năm xuất bản tạp chí.
 
 | Mã | Chủ đề | Cần đọc để làm gì? |

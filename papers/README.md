@@ -2,6 +2,10 @@
 
 [Home](../README.md) · [Tiếng Việt](README.vi.md) · [Repository catalog](../catalog/repositories.csv)
 
+**Detailed reading:** [Browse all 14 paper profiles](PROFILES.md) · [Browse 19 repository profiles](../repositories/README.md)
+
+The reading map below is a compact index. Each detailed profile adds a central question, what to extract from the paper, software connections, a proposed exercise and limits of interpretation.
+
 Selection checked on October 15, 2026. These are annotated entry points, not a systematic literature review. Years below are preprint years for arXiv entries and publication years for DOI-only entries. A software link can be a later implementation of a method; it is not necessarily the authors' original code or a reproduction of all paper results.
 
 ## Reading map
