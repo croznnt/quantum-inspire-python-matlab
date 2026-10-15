@@ -1,5 +1,7 @@
 # Làm việc từ MATLAB
 
+**Ngôn ngữ / Language:** **Tiếng Việt** · [English](MATLAB.en.md) · [Trang chính](../README.md)
+
 Chưa xác minh được SDK MATLAB chính thức cho Quantum Inspire trong phạm vi khảo sát. Tích hợp dưới đây là hướng triển khai đề xuất.
 
 ## Gọi Python
