@@ -4,8 +4,6 @@
 
 A research hub for **numerical quantum dynamics, pulse design, robust control, and quantum optimal control**, centered on Python and MATLAB. Quantum Inspire is retained as a platform-integration reference.
 
-**Last curated:** October 15, 2026 · **Owner:** [croznnt](https://github.com/croznnt)
-
 ## 📊 At a glance
 
 | Resource | Count | Scope |

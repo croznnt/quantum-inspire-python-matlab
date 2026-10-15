@@ -4,8 +4,6 @@
 
 Repo nghiên cứu về mô phỏng động lực học lượng tử, thiết kế xung, điều khiển bền vững và tối ưu điều khiển, ưu tiên Python và MATLAB. Tiếng Anh là trang mặc định trên GitHub.
 
-**Ngày khảo sát:** 15 tháng 10 năm 2026.
-
 ## 📊 Thống kê
 
 | Tài nguyên | Số lượng | Nội dung |
