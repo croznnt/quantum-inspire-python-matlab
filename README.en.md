@@ -112,7 +112,7 @@ After installing GitHub CLI and signing in with `gh auth login`, run from the pr
 gh repo create croznnt/quantum-inspire-python-matlab --private --source . --remote origin --push
 ```
 
-This command creates a private repository and pushes existing commits to GitHub. No remote repository was created during this preparation.
+Use this command for the initial publication: it creates a private repository and pushes existing commits to GitHub. Once the `origin` remote exists, use `git push` for subsequent updates.
 
 ## Sources and copyright
 

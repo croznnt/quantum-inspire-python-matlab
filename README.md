@@ -112,7 +112,7 @@ Sau khi cài GitHub CLI và đăng nhập bằng `gh auth login`, chạy từ th
 gh repo create croznnt/quantum-inspire-python-matlab --private --source . --remote origin --push
 ```
 
-Lệnh này tạo repo riêng tư và đẩy commit hiện có lên GitHub. Chưa có repo từ xa nào được tạo trong lần chuẩn bị này.
+Lệnh này dành cho lần xuất bản đầu tiên: tạo repo riêng tư và đẩy commit hiện có lên GitHub. Khi đã có remote `origin`, dùng `git push` cho các lần cập nhật tiếp theo.
 
 ## Nguồn và bản quyền
 
