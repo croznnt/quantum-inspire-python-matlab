@@ -1,8 +1,14 @@
 # Working from MATLAB
 
-**Language / Ngôn ngữ:** [Tiếng Việt](MATLAB.md) · **English** · [Home](../README.en.md)
+**Language / Ngôn ngữ:** [Tiếng Việt](MATLAB.md) · **English** · [Home](../README.md)
 
-No official Quantum Inspire MATLAB SDK was verified within this survey. The integration below is a proposed approach.
+## Native simulation and optimal control
+
+[Spinach](https://github.com/IlyaKuprov/Spinach) is a native MATLAB spin-dynamics simulation library with an [optimal-control module](https://spindynamics.org/wiki/index.php?title=Optimal_control_module), including GRAPE workflows and pulse penalties. Start with its upstream examples and tutorials. Check the current README for the required MATLAB release and toolboxes; a MATLAB license alone may not cover the required setup.
+
+Read [P11 and P04](../papers/README.md#reading-map), then use the [research guide](RESEARCH_GUIDE.md) to define a small spin-control benchmark. DYNAMO is another historical MATLAB framework discussed in P09; a current GitHub source mirror has not been verified here.
+
+No official Quantum Inspire MATLAB SDK was verified within this survey. This concerns platform integration, not the availability of MATLAB simulation/control tools. The optional interoperability route below is a proposed approach, not a tested integration.
 
 ## Calling Python
 

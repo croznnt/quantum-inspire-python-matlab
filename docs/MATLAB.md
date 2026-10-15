@@ -1,8 +1,14 @@
 # Làm việc từ MATLAB
 
-**Ngôn ngữ / Language:** **Tiếng Việt** · [English](MATLAB.en.md) · [Trang chính](../README.md)
+**Ngôn ngữ / Language:** **Tiếng Việt** · [English](MATLAB.en.md) · [Trang chính](../README.vi.md)
 
-Chưa xác minh được SDK MATLAB chính thức cho Quantum Inspire trong phạm vi khảo sát. Tích hợp dưới đây là hướng triển khai đề xuất.
+## Mô phỏng và điều khiển trực tiếp bằng MATLAB
+
+[Spinach](https://github.com/IlyaKuprov/Spinach) là thư viện MATLAB cho động lực học spin, có [module tối ưu điều khiển](https://spindynamics.org/wiki/index.php?title=Optimal_control_module), gồm các quy trình GRAPE và phạt xung. Bắt đầu từ ví dụ và tutorial của dự án. Kiểm tra phiên bản MATLAB và toolbox yêu cầu trong README nguồn.
+
+Đọc P11, P04 và [hướng dẫn nghiên cứu](RESEARCH_GUIDE.vi.md) trước khi dựng bài toán nhỏ. P09 giới thiệu framework MATLAB DYNAMO trong lịch sử; chưa xác minh được bản nguồn GitHub hiện tại trong lần khảo sát này.
+
+Chưa xác minh được SDK MATLAB chính thức cho Quantum Inspire chỉ nói về tích hợp nền tảng, không nói rằng MATLAB thiếu công cụ mô phỏng và điều khiển. Phần kết nối Python dưới đây là hướng triển khai đề xuất, chưa kiểm thử.
 
 ## Gọi Python
 

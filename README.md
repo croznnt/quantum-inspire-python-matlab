@@ -1,121 +1,112 @@
-# Quantum Inspire: Python và MATLAB
+# Quantum Dynamics & Optimal Control
 
-**Ngôn ngữ / Language:** **Tiếng Việt** · [English](README.en.md)
+**Language:** **English** · [Tiếng Việt](README.vi.md)
 
-Danh mục mã nguồn, notebook và công cụ trong hệ sinh thái Quantum Inspire, ưu tiên Python và hướng kết nối MATLAB.
+A research hub for **numerical quantum dynamics, pulse design, robust control, and quantum optimal control**, centered on Python and MATLAB. Quantum Inspire is retained as a platform-integration reference.
 
-**Cập nhật khảo sát:** 15 tháng 10 năm 2026 · **Tài khoản:** `croznnt` · **Repo đề xuất:** `quantum-inspire-python-matlab`
+**Last curated:** October 15, 2026 · **Owner:** [croznnt](https://github.com/croznnt)
 
-## 📊 Tổng quan danh mục
+## 📊 At a glance
 
-| Chỉ số | Số lượng | Phạm vi thống kê |
+| Resource | Count | Scope |
 | :--- | :--- | :--- |
-| Repo được tổng hợp | **10** | Các repo trong ba bảng bên dưới |
-| Nguồn Python ưu tiên | **6** | SDK, bộ tích hợp, ví dụ, trình biên dịch và tiện ích |
-| Công cụ và đặc tả bổ trợ | **3** | OpenQL, libqasm và QuIS; OpenQL cũng có giao diện Python |
-| Repo tham khảo lịch sử | **1** | quantuminspire2 đã lưu trữ |
-| SDK MATLAB chính thức đã xác minh | **0** | Chưa tìm thấy trong phạm vi khảo sát |
-| Repo có trong script tải nguồn | **9** | Không gồm quantuminspire2 |
+| Simulation and control software | **7** | QuTiP, qtrl, qoc, Krotov, QuOCS, dynamiqs, Spinach |
+| Tutorial / paper-artifact repositories | **2** | QuTiP tutorials and semi-automatic differentiation artifacts |
+| Quantum Inspire ecosystem repositories | **10** | SDKs, providers, examples, compilers and historical references |
+| Total repositories | **19** | Unique entries in [the catalog](catalog/repositories.csv) |
+| Annotated papers | **14** | Reviews, methods, software and feedback theory |
+| Proposed simulation benchmarks | **7** | One-qubit control through measurement feedback |
 
-Các nhóm trên phục vụ điều hướng, không phải thống kê toàn bộ GitHub. Số liệu được đếm từ danh mục này, không biểu thị mức độ hoạt động hoặc khả năng tương thích đã kiểm thử.
+Counts describe this catalog, not all available resources. Source descriptions were checked online. No package compatibility test, benchmark or paper reproduction has been performed here.
 
-**Đi nhanh:** [Nguồn Python](#python-sources) · [Công cụ bổ trợ](#supporting-tools) · [MATLAB](#matlab) · [Tải nguồn](#download) · [Đưa lên GitHub](#publish)
+**Explore:** [Papers](papers/README.md) · [Research guide](docs/RESEARCH_GUIDE.md) · [MATLAB](docs/MATLAB.en.md) · [Quantum Inspire](docs/QUANTUM_INSPIRE.en.md)
 
-<a id="python-sources"></a>
+## 🎯 Research scope
 
-## 🐍 Nguồn Python
+The workflow is **physical model → reliable propagation → objective and constraints → pulse optimization → independent validation**. The focus is classical numerical simulation of controlled quantum systems. Circuit submission and platform integration are supporting topics.
 
-Python là nguồn chính trong danh mục. Nếu mới bắt đầu, đọc SDK trước, chọn Qiskit hoặc PennyLane, rồi tham khảo notebook.
+The [research guide](docs/RESEARCH_GUIDE.md) covers Hamiltonian and Lindblad models, fidelity conventions, uncertainty ensembles, leakage, numerical convergence and fair comparisons. Its benchmark proposals are starting projects, not reproduced results.
 
-| Repo | Loại nguồn | Dùng để làm gì? | Gợi ý lựa chọn |
-| :--- | :--- | :--- | :--- |
-| [quantuminspire](https://github.com/QuTech-Delft/quantuminspire) | SDK và CLI | Đăng nhập và tương tác với nền tảng | **Bắt đầu ở đây** |
-| [qiskit-quantuminspire](https://github.com/QuTech-Delft/qiskit-quantuminspire) | Bộ tích hợp Qiskit | Làm việc với mạch lượng tử qua Qiskit | Khi dùng Qiskit |
-| [pennylane-quantuminspire](https://github.com/QuTech-Delft/pennylane-quantuminspire) | Bộ tích hợp PennyLane | Kết nối backend với quy trình PennyLane | Khi dùng PennyLane |
-| [quantum-inspire-examples](https://github.com/QuTech-Delft/quantum-inspire-examples) | Python và Jupyter Notebook | Học thuật toán qua ví dụ | Kiểm tra API cũ, Qiskit và ProjectQ |
-| [OpenSquirrel](https://github.com/QuTech-Delft/OpenSquirrel) | Trình biên dịch Python | Xử lý và chuyển đổi chương trình lượng tử | Nghiên cứu biên dịch |
-| [qilib](https://github.com/QuTech-Delft/qilib) | Thư viện tiện ích | Tham khảo các lớp tiện ích của Quantum Inspire | Kiểm tra phụ thuộc riêng |
+## 🧰 Software map
 
-### Bắt đầu với Python
+| Project | Language | Capabilities | Starting use | Paper IDs |
+| :--- | :--- | :--- | :--- | :--- |
+| [QuTiP](https://github.com/qutip/qutip) | Python | Time-dependent dynamics and open-system solvers | Validate a physical model | P03 |
+| [qutip-qtrl](https://github.com/qutip/qutip-qtrl) | Python | GRAPE and CRAB | Bounded pulse optimization baseline | P04, P06 |
+| [qutip-qoc](https://github.com/qutip/qutip-qoc) | Python | GOAT, JOPT; GRAPE/CRAB via qtrl | Analytic pulse parameterizations | P08 |
+| [krotov](https://github.com/qucontrol/krotov) | Python | Krotov updates | State transfer and gate objectives | P05 |
+| [QuOCS](https://github.com/Quantum-OCS/QuOCS) | Python | GRAPE, dCRAB, direct search | Custom numerical or experimental objectives | P07, P10 |
+| [dynamiqs](https://github.com/dynamiqs/dynamiqs) | Python / JAX | Differentiable, batched simulation | Parameter sweeps and custom gradients | See upstream citation |
+| [Spinach](https://github.com/IlyaKuprov/Spinach) | MATLAB | Spin dynamics and optimal control including GRAPE | Native MATLAB spin-control studies | P04, P11 |
 
-1. Đọc README và yêu cầu phiên bản Python tại repo `quantuminspire`.
-2. Cài CLI theo hướng dẫn chính thức bằng `pipx install quantuminspire`, sau đó chạy `qi --help` và `qi login`.
-3. Chọn một bộ tích hợp Qiskit hoặc PennyLane và làm theo tài liệu của chính bộ tích hợp đó. Môi trường pipx của CLI tách biệt với môi trường Python chứa notebook và các bộ tích hợp.
-4. Tạo môi trường riêng khi chạy ví dụ cũ. Không mặc định trộn mọi repo vào một môi trường.
+This is a capability map, not a performance ranking. qutip-qoc builds on qutip-qtrl; they are not independent implementations of every listed algorithm. Follow each project's installation instructions and use separate environments until dependency compatibility has been checked.
 
-Tài liệu: [Qiskit](https://qutech-delft.github.io/qiskit-quantuminspire/) và [PennyLane](https://qutech-delft.github.io/pennylane-quantuminspire/).
+### Tutorials and reproduction artifacts
 
-<a id="supporting-tools"></a>
-
-## 🧩 Công cụ và đặc tả bổ trợ
-
-| Repo | Công nghệ hoặc nội dung | Vai trò |
+| Repository | Language | Contents |
 | :--- | :--- | :--- |
-| [OpenQL](https://github.com/QuTech-Delft/OpenQL) | C++ và Python | Framework lập trình và biên dịch lượng tử |
-| [libqasm](https://github.com/QuTech-Delft/libqasm) | Thư viện phân tích cQASM | Tham khảo xử lý ngôn ngữ cQASM |
-| [QuIS](https://github.com/QuTech-Delft/QuIS) | Đặc tả tập lệnh | Tra cứu tập lệnh dùng trong hệ sinh thái |
+| [qutip-tutorials](https://github.com/qutip/qutip-tutorials) | Python / notebooks | Upstream tutorials; match dependencies to your environment |
+| [2022-04_semiad_paper](https://github.com/ARLQCI/2022-04_semiad_paper) | Julia / Python | Scripts, notebooks and data associated with P13, outside the primary Python/MATLAB stack |
 
-### Nguồn lịch sử
+## 📚 Literature and reading path
 
-| Repo | Trạng thái | Mục đích |
+The [annotated paper collection](papers/README.md) provides titles, authors, dates, primary-source links, method notes and explicit paper-to-code relationships.
+
+| Track | Papers | Intended outcome |
 | :--- | :--- | :--- |
-| [quantuminspire2](https://github.com/QuTech-Delft/quantuminspire2) | Đã lưu trữ | Tra cứu lịch sử SDK; ưu tiên quantuminspire cho dự án mới |
+| Orientation | P01, P02 | Define the system, task and constraints |
+| Simulation | P03, P11 | Understand propagation and spin modeling |
+| Gradient methods | P04, P05, P09 | Compare GRAPE and Krotov on a shared task |
+| Reduced / analytic controls | P06, P07, P08, P10 | Choose CRAB, dCRAB or GOAT parameterizations |
+| Differentiable optimization | P12, P13 | Evaluate autodiff and semi-automatic differentiation |
+| Measurement feedback | P14 | Design a conditional-dynamics study |
 
-<a id="matlab"></a>
+Start with **P02 → P03 → P04**, then [B01 and B02](docs/RESEARCH_GUIDE.md#benchmark-ladder). Continue with uncertainty, dissipation and leakage before claiming practical robustness. Experimental closed-loop pulse optimization between trials differs from feedback during evolution; open-system dynamics is a separate distinction.
 
-## 🔬 MATLAB và Python: mức hỗ trợ
+## 🔬 MATLAB and Quantum Inspire
 
-| Tiêu chí | Python | MATLAB |
-| :--- | :--- | :--- |
-| Mã nguồn trong danh mục | Có SDK, bộ tích hợp và notebook | Chưa xác minh được SDK chính thức |
-| Điểm bắt đầu | quantuminspire | Hướng dẫn kết nối Python bên dưới |
-| Hướng sử dụng | Làm theo tài liệu từng repo | Gọi Python hoặc trao đổi JSON |
-| Đã chạy thử trong dự án này | Chưa | Chưa |
+**Spinach** provides a native MATLAB route for spin simulation and control. Check its upstream MATLAB and toolbox requirements. No official MATLAB SDK specifically for Quantum Inspire was verified; this does not mean MATLAB lacks quantum-control tools.
 
-Khảo sát với các truy vấn `quantuminspire matlab` và `quantum-inspire matlab` chưa xác định được SDK MATLAB chính thức trên GitHub. Điều này không chứng minh rằng không có dự án cộng đồng.
+See the [MATLAB guide](docs/MATLAB.en.md) and [original platform catalog](docs/QUANTUM_INSPIRE.en.md). Circuit submission must not be assumed to expose arbitrary waveform control or continuous measurement feedback.
 
-Hướng tích hợp đề xuất là gọi Python từ MATLAB hoặc trao đổi kết quả qua JSON. Đây là đề xuất kiến trúc, chưa phải bộ tích hợp đã kiểm thử. Xem [hướng dẫn MATLAB](docs/MATLAB.md).
+## 📥 Download selected sources
 
-<a id="download"></a>
-
-## 📥 Tải các repo nguồn
-
-Chạy từ thư mục repo bằng PowerShell:
+Run in PowerShell from this repository:
 
 ```powershell
+# Recommended starting set: 7 repositories
 ./scripts/clone-sources.ps1
+# All 9 research software, tutorial and paper-artifact entries
+./scripts/clone-sources.ps1 -Group research
+# Original ecosystem, excluding archived quantuminspire2
+./scripts/clone-sources.ps1 -Group platform
+# All 18 non-historical entries
+./scripts/clone-sources.ps1 -Group all
+# Show selection without downloads
+./scripts/clone-sources.ps1 -Group all -ListOnly
 ```
 
-Script chỉ clone các repo chính vào `sources/`, bỏ qua đường dẫn đã tồn tại, không cài gói và không chạy mã bên trong repo nguồn. Mỗi repo giữ nguyên lịch sử và giấy phép của nó. Thư mục `sources/` không được commit vào repo tổng hợp.
+The script reads [repositories.csv](catalog/repositories.csv), clones into `sources/<owner>/<repo>`, and skips existing paths. It does not install dependencies, execute downloaded code, update or delete existing clones. Historical quantuminspire2 is excluded from downloads.
 
-### Cấu trúc thư mục
+## 🗂 Documentation layout
 
-```text
-.
-├── README.md                  Danh mục và thống kê nguồn
-├── README.en.md               Bản tiếng Anh
-├── docs/
-│   ├── MATLAB.md              Hướng dẫn MATLAB tiếng Việt
-│   └── MATLAB.en.md           Hướng dẫn MATLAB tiếng Anh
-├── scripts/
-│   └── clone-sources.ps1       Tải 9 repo nguồn
-└── sources/                   Xuất hiện sau khi tải, được Git bỏ qua
-```
+| Path | Contents |
+| :--- | :--- |
+| [README.vi.md](README.vi.md) | Vietnamese landing page |
+| [papers/](papers/README.md) | Annotated literature and Vietnamese companion |
+| [catalog/](catalog/repositories.csv) | Machine-readable source inventory |
+| [Research guide](docs/RESEARCH_GUIDE.md) | Models, objectives, constraints and benchmark proposals |
+| [Vietnamese research guide](docs/RESEARCH_GUIDE.vi.md) | Vietnamese research companion |
+| [MATLAB guide](docs/MATLAB.en.md) | Native MATLAB and optional Python/JSON routes |
+| [Quantum Inspire catalog](docs/QUANTUM_INSPIRE.en.md) | Original 10 ecosystem references |
+| [Download script](scripts/clone-sources.ps1) | Selective cloning, no installations |
 
-<a id="publish"></a>
+## Reproducibility and contributions
 
-## ☁️ Đưa lên GitHub
+1. Add resources with a concrete control/simulation use case and a primary-source link.
+2. Distinguish paper-associated software, later method implementations, and reproduction artifacts.
+3. Keep counts, catalog entries, download groups and both language entry pages consistent.
+4. Record exact versions, commits, seeds, units, model definitions, solver tolerances, pulses, objective conventions, logs and raw data when claiming results.
+5. Respect upstream LICENSE and NOTICE files. Link to papers instead of redistributing PDFs without permission.
 
-Sau khi cài GitHub CLI và đăng nhập bằng `gh auth login`, chạy từ thư mục dự án:
-
-```powershell
-gh repo create croznnt/quantum-inspire-python-matlab --private --source . --remote origin --push
-```
-
-Lệnh này dành cho lần xuất bản đầu tiên: tạo repo riêng tư và đẩy commit hiện có lên GitHub. Khi đã có remote `origin`, dùng `git push` cho các lần cập nhật tiếp theo.
-
-## Nguồn và bản quyền
-
-Khi cập nhật danh mục, số liệu hoặc hướng dẫn, cập nhật cả `README.md` và `README.en.md`. Hướng dẫn MATLAB cũng được duy trì bằng hai ngôn ngữ trong `docs/`.
-
-Danh mục ưu tiên repo của tổ chức QuTech Delft. Liên kết ở từng dòng là nguồn kiểm chứng. Trạng thái và API có thể thay đổi sau ngày khảo sát. Nội dung tổng hợp được viết riêng; mã nguồn bên thứ ba không được sao chép vào đây. Khi tái sử dụng mã, đọc LICENSE và NOTICE tại đúng phiên bản nguồn, giữ nguyên thông báo bản quyền theo yêu cầu của từng repo.
+English is the default; Vietnamese companions are available through language links. This repository contains original annotations and links. Upstream code and paper results remain attributed to their respective authors.
