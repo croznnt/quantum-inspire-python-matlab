@@ -1,4 +1,19 @@
-# Mô phỏng và tối ưu điều khiển lượng tử
+# ⚛️ Mô phỏng và tối ưu điều khiển lượng tử
+
+<p align="center">
+  <a href="https://github.com/qutip/qutip"><img src="https://avatars.githubusercontent.com/u/2517630?v=4" width="64" height="64" alt="QuTiP organization avatar"></a>&nbsp;&nbsp;
+  <a href="https://github.com/Quantum-OCS/QuOCS"><img src="https://avatars.githubusercontent.com/u/80833925?v=4" width="64" height="64" alt="QuOCS organization avatar"></a>&nbsp;&nbsp;
+  <a href="https://github.com/dynamiqs/dynamiqs"><img src="https://avatars.githubusercontent.com/u/135633837?v=4" width="64" height="64" alt="dynamiqs organization avatar"></a>&nbsp;&nbsp;
+  <a href="https://github.com/QuTech-Delft/quantuminspire"><img src="https://avatars.githubusercontent.com/u/42680367?v=4" width="64" height="64" alt="QuTech organization avatar"></a>
+</p>
+<p align="center"><a href="https://github.com/qutip/qutip">QuTiP</a> · <a href="https://github.com/Quantum-OCS/QuOCS">QuOCS</a> · <a href="https://github.com/dynamiqs/dynamiqs">dynamiqs</a> · <a href="https://github.com/QuTech-Delft/quantuminspire">QuTech</a></p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&amp;logo=python&amp;logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/MATLAB-e16737?style=flat-square" alt="MATLAB">
+  <img src="https://img.shields.io/badge/Repositories-19-2563eb?style=flat-square" alt="19 repositories">
+  <img src="https://img.shields.io/badge/Papers-14-7c3aed?style=flat-square" alt="14 papers">
+</p>
 
 **Ngôn ngữ:** [English](README.md) · **Tiếng Việt**
 
@@ -18,6 +33,8 @@ Repo nghiên cứu về mô phỏng động lực học lượng tử, thiết k
 Chưa chạy benchmark, kiểm thử tương thích gói hoặc tái lập kết quả bài báo. Số liệu chỉ mô tả danh mục này.
 
 **Đi nhanh:** [Bài báo](papers/README.vi.md) · [Hướng dẫn nghiên cứu](docs/RESEARCH_GUIDE.vi.md) · [MATLAB](docs/MATLAB.md) · [Quantum Inspire](docs/QUANTUM_INSPIRE.vi.md) · [Catalog](catalog/repositories.csv)
+
+**Chú giải:** ⚛️ mô phỏng · 🎛️ điều khiển · 📓 hướng dẫn · 🧪 mã tái lập · ☁️ nền tảng · ⚙️ biên dịch · 📐 đặc tả · 🗄️ lịch sử
 
 ## 🧭 Chọn theo nhu cầu
 
@@ -82,7 +99,7 @@ SDK nền tảng để gửi mạch không mặc định cho phép điều khi�
 
 Mặc định tải 7 repo khởi đầu. Nhóm research có 9 repo, platform có 9 repo, all có 18 repo. Repo lịch sử quantuminspire2 không được tải tự động. Script đọc catalog, tải vào `sources/<owner>/<repo>` và bỏ qua đường dẫn đã có. Script không cài gói, chạy mã tải về, cập nhật hoặc xóa bản clone hiện có. Thư mục nguồn được Git bỏ qua.
 
-## Kiểm chứng và đóng góp
+## 📋 Kiểm chứng và đóng góp
 
 1. Bổ sung nguồn kèm mục đích sử dụng cụ thể và liên kết chính chủ.
 2. Phân biệt mã của bài báo, bản triển khai phương pháp về sau và mã tái lập kết quả.

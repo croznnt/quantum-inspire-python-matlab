@@ -1,4 +1,19 @@
-# Quantum Dynamics & Optimal Control
+# ⚛️ Quantum Dynamics & Optimal Control
+
+<p align="center">
+  <a href="https://github.com/qutip/qutip"><img src="https://avatars.githubusercontent.com/u/2517630?v=4" width="64" height="64" alt="QuTiP organization avatar"></a>&nbsp;&nbsp;
+  <a href="https://github.com/Quantum-OCS/QuOCS"><img src="https://avatars.githubusercontent.com/u/80833925?v=4" width="64" height="64" alt="QuOCS organization avatar"></a>&nbsp;&nbsp;
+  <a href="https://github.com/dynamiqs/dynamiqs"><img src="https://avatars.githubusercontent.com/u/135633837?v=4" width="64" height="64" alt="dynamiqs organization avatar"></a>&nbsp;&nbsp;
+  <a href="https://github.com/QuTech-Delft/quantuminspire"><img src="https://avatars.githubusercontent.com/u/42680367?v=4" width="64" height="64" alt="QuTech organization avatar"></a>
+</p>
+<p align="center"><a href="https://github.com/qutip/qutip">QuTiP</a> · <a href="https://github.com/Quantum-OCS/QuOCS">QuOCS</a> · <a href="https://github.com/dynamiqs/dynamiqs">dynamiqs</a> · <a href="https://github.com/QuTech-Delft/quantuminspire">QuTech</a></p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&amp;logo=python&amp;logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/MATLAB-e16737?style=flat-square" alt="MATLAB">
+  <img src="https://img.shields.io/badge/Repositories-19-2563eb?style=flat-square" alt="19 repositories">
+  <img src="https://img.shields.io/badge/Papers-14-7c3aed?style=flat-square" alt="14 papers">
+</p>
 
 **Language:** **English** · [Tiếng Việt](README.vi.md)
 
@@ -18,6 +33,8 @@ A research hub for **numerical quantum dynamics, pulse design, robust control, a
 Counts describe this catalog, not all available resources. Source descriptions were checked online. No package compatibility test, benchmark or paper reproduction has been performed here.
 
 **Explore:** [Papers](papers/README.md) · [Research guide](docs/RESEARCH_GUIDE.md) · [MATLAB](docs/MATLAB.en.md) · [Quantum Inspire](docs/QUANTUM_INSPIRE.en.md)
+
+**Visual key:** ⚛️ simulation · 🎛️ control · 📓 tutorials · 🧪 reproduction artifacts · ☁️ platform · ⚙️ compiler · 📐 specification · 🗄️ historical
 
 ## 🧭 Find the right resource
 
@@ -114,7 +131,7 @@ The script reads [repositories.csv](catalog/repositories.csv), clones into `sour
 | [Quantum Inspire catalog](docs/QUANTUM_INSPIRE.en.md) | Original 10 ecosystem references |
 | [Download script](scripts/clone-sources.ps1) | Selective cloning, no installations |
 
-## Reproducibility and contributions
+## 📋 Reproducibility and contributions
 
 1. Add resources with a concrete control/simulation use case and a primary-source link.
 2. Distinguish paper-associated software, later method implementations, and reproduction artifacts.

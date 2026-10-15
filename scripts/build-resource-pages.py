@@ -45,6 +45,28 @@ PAPERS = {
     'P14': ('Theory / measurement feedback', 'How do direct Markovian feedback and state-estimate-based feedback differ?', 'Identify the monitored two-level model, measurement assumptions and stabilization target.', 'Specify a conditional stochastic model and measurement record for a separate feedback study.', 'This catalog verifies no paper-specific code; an unconditional master-equation simulation alone does not implement measurement feedback.'),
 }
 
+ICONS = {'simulation': '⚛️', 'control': '🎛️', 'tutorials': '📓', 'reproduction': '🧪', 'platform': '☁️', 'compiler': '⚙️', 'specification': '📐', 'historical': '🗄️'}
+AVATARS = {
+    'qutip': '2517630',
+    'Quantum-OCS': '80833925',
+    'dynamiqs': '135633837',
+    'QuTech-Delft': '42680367',
+}
+
+def repo_visual(repo):
+    owner = repo['repository'].split('/')[0]
+    avatar = AVATARS.get(owner)
+    image = f'<a href="https://github.com/{owner}"><img src="https://avatars.githubusercontent.com/u/{avatar}?v=4" width="56" height="56" alt="{owner} organization avatar"></a>\n\n' if avatar else ''
+    group = repo['priority']
+    image += f'![Catalog group](https://img.shields.io/badge/Group-{group}-2563eb?style=flat-square) '
+    if 'Python' in repo['language']:
+        image += '![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) '
+    if 'MATLAB' in repo['language']:
+        image += '![MATLAB](https://img.shields.io/badge/MATLAB-e16737?style=flat-square) '
+    if 'Julia' in repo['language']:
+        image += '![Julia](https://img.shields.io/badge/Julia-9558B2?style=flat-square&logo=julia&logoColor=white) '
+    return image.rstrip()
+
 def write(path, text):
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(text, encoding='utf-8')
@@ -57,7 +79,7 @@ for line in paper_text.splitlines():
         cells = [s.strip() for s in line.strip('|').split('|')]
         paper_rows[cells[0]] = cells
 
-repo_index = ['# Repository profiles', '', '[Home](../README.md) · [Papers](../papers/README.md) · [Tiếng Việt](../README.vi.md)', '',
+repo_index = ['# 🧰 Repository profiles', '', '[Home](../README.md) · [Papers](../papers/README.md) · [Tiếng Việt](../README.vi.md)', '',
               'Each profile explains the role, a suggested first exercise, numerical checks and its boundary within a control research workflow. Exercises are editorial proposals, not claims of tested results.', '',
               '| Repository | Language | Research role | Profile |', '| :--- | :--- | :--- | :--- |']
 for repo in repos:
@@ -67,48 +89,50 @@ for repo in repos:
     paper_links = ', '.join(f'[{p}](../papers/profiles/{p}.md)' for p in related) or 'No specific paper association asserted in this catalog.'
     source = f"https://github.com/{repo['repository']}"
     name = repo['repository'].split('/')[-1]
-    repo_index.append(f"| [{repo['repository']}]({source}) | {repo['language']} | {role} | [Read profile]({rid}.md) |")
-    write(ROOT / 'repositories' / f'{rid}.md', f'''# {name}
+    repo_index.append(f"| {ICONS.get(repo['category'], '📦')} [{repo['repository']}]({source}) | {repo['language']} | {role} | [Read profile]({rid}.md) |")
+    write(ROOT / 'repositories' / f'{rid}.md', f'''# {ICONS.get(repo['category'], '📦')} {name}
 
-[All repositories](README.md) · [Home](../README.md) · [Source]({source})
+[🧰 All repositories](README.md) · [🏠 Home](../README.md) · [🔗 Source]({source})
+
+{repo_visual(repo)}
 
 | Field | Description |
 | :--- | :--- |
-| Upstream | [{repo['repository']}]({source}) |
+| Upstream | {ICONS.get(repo['category'], '📦')} [{repo['repository']}]({source}) |
 | Language / ecosystem | {repo['language']} |
 | Catalog category | {repo['category']} |
 | Download group | {repo['priority']} |
 | Research role | {role} |
 
-## What this repository contributes
+## 🎯 What this repository contributes
 
 {purpose}
 
-## Suggested first exercise
+## 🧪 Suggested first exercise
 
 {exercise}
 
 This is a proposed starting task. Consult the upstream README, examples and supported dependencies for executable instructions.
 
-## What to check
+## ✅ What to check
 
 {checks}
 
-## Scope and limitations
+## 🔎 Scope and limitations
 
 {boundary}
 
-## Related literature
+## 📚 Related literature
 
 {paper_links}
 
-## Evidence and provenance
+## 🔗 Evidence and provenance
 
 The capability summary refers to the [upstream project]({source}). The workflow suggestions are this catalog's editorial guidance. This profile does not claim an installation test, benchmark or paper reproduction. Read the upstream LICENSE and NOTICE at the version you use.
 ''')
 write(ROOT / 'repositories/README.md', '\n'.join(repo_index) + '\n')
 
-paper_index = ['# Detailed paper profiles', '', '[Paper map](README.md) · [Home](../README.md) · [Repositories](../repositories/README.md)', '',
+paper_index = ['# 📚 Detailed paper profiles', '', '[Paper map](README.md) · [Home](../README.md) · [Repositories](../repositories/README.md)', '',
                'Titles and bibliographic links come from the main paper map. Profiles add reading questions and proposed exercises; they are not full-text critical reviews or reproduced results.', '',
                '| ID | Paper | Type | Profile |', '| :--- | :--- | :--- | :--- |']
 for pid, row in paper_rows.items():
@@ -119,9 +143,11 @@ for pid, row in paper_rows.items():
     code_links = ', '.join(f"[{r['repository']}](../../repositories/{r['id']}.md)" for r in related) or 'No linked implementation is asserted in the structured catalog.'
     # Original map links use absolute web URLs, so remain valid inside profiles.
     paper_index.append(f'| {pid} | {citation} | {kind} | [Read profile](profiles/{pid}.md) |')
-    write(ROOT / 'papers/profiles' / f'{pid}.md', f'''# {pid}: {title}
+    write(ROOT / 'papers/profiles' / f'{pid}.md', f'''# 📄 {pid}: {title}
 
-[All papers](../README.md) · [Detailed index](../PROFILES.md) · [Home](../../README.md)
+[📚 All papers](../README.md) · [🗂 Detailed index](../PROFILES.md) · [🏠 Home](../../README.md)
+
+![Paper ID](https://img.shields.io/badge/Paper-{pid}-6366f1?style=flat-square) ![Evidence](https://img.shields.io/badge/Reproduction-not_performed-64748b?style=flat-square)
 
 | Field | Description |
 | :--- | :--- |
@@ -132,33 +158,33 @@ for pid, row in paper_rows.items():
 
 Year follows the main catalog convention: arXiv submission year for preprints and publication year for DOI-only entries. Export the formal citation from the primary record for your chosen version.
 
-## Central reading question
+## ❓ Central reading question
 
 {question}
 
-## What to extract while reading
+## 📝 What to extract while reading
 
 {focus}
 
 Record the physical system, objective definition, control parameterization, assumptions and numerical validation used by the authors. Do not assume an abstract establishes implementation details not checked in the full text.
 
-## Connection to software
+## 💻 Connection to software
 
 {relationship}
 
 Profiles in this catalog: {code_links}
 
-## Suggested follow-up exercise
+## 🧪 Suggested follow-up exercise
 
 {exercise}
 
 This exercise is proposed by the catalog. It is not necessarily an experiment or figure reported in the paper.
 
-## Limits of interpretation
+## 🔎 Limits of interpretation
 
 {limitation}
 
-## Reproduction status
+## 📋 Reproduction status
 
 **Not reproduced in this repository.** Before making a reproduction claim, identify the exact paper revision and target figure, then preserve the code commit, environment, model parameters, seeds, numerical settings, raw results and analysis scripts. A later implementation of the same method is not automatically the paper's original code.
 ''')

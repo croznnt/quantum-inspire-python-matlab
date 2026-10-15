@@ -1,4 +1,4 @@
-# Bài báo về mô phỏng và tối ưu điều khiển lượng tử
+# 📚 Bài báo về mô phỏng và tối ưu điều khiển lượng tử
 
 [English](README.md) · [Trang chính tiếng Việt](../README.vi.md)
 

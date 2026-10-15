@@ -1,4 +1,4 @@
-# Papers: quantum dynamics and optimal control
+# 📚 Papers: quantum dynamics and optimal control
 
 [Home](../README.md) · [Tiếng Việt](README.vi.md) · [Repository catalog](../catalog/repositories.csv)
 
@@ -8,7 +8,9 @@ The reading map below is a compact index. Each detailed profile adds a central q
 
 Selection checked on October 15, 2026. These are annotated entry points, not a systematic literature review. Years below are preprint years for arXiv entries and publication years for DOI-only entries. A software link can be a later implementation of a method; it is not necessarily the authors' original code or a reproduction of all paper results.
 
-## Reading map
+<a id="reading-map"></a>
+
+## 🗺️ Reading map
 
 | ID | Paper and authors | Year | Why read it? | Code relationship |
 | :--- | :--- | :--- | :--- | :--- |
@@ -27,7 +29,7 @@ Selection checked on October 15, 2026. These are annotated entry points, not a s
 | P13 | Goerz, Carrasco and Malinovsky, [Quantum Optimal Control via Semi-Automatic Differentiation](https://arxiv.org/abs/2205.15044) | 2022 | Separate propagation derivatives from objective differentiation | Author-associated [scripts, notebooks and data](https://github.com/ARLQCI/2022-04_semiad_paper), Julia / Python; [published paper](https://quantum-journal.org/papers/q-2022-12-07-871/) |
 | P14 | Wiseman, Mancini and Wang, [Bayesian feedback versus Markovian feedback in a two-level atom](https://arxiv.org/abs/quant-ph/0201145) | 2002 | Distinguish state-estimate feedback from direct measurement feedback | Theory reference; implementing a controller and validating its measurement model are separate tasks |
 
-## Method selection
+## 🎛️ Method selection
 
 | Method | Optimization variables | Useful first problem | What to inspect |
 | :--- | :--- | :--- | :--- |
@@ -40,7 +42,7 @@ Selection checked on October 15, 2026. These are annotated entry points, not a s
 
 Experimental closed-loop pulse optimization evaluates and updates a pulse between trials. Measurement-based feedback changes the control using measurements during evolution. Open-system dynamics concerns coupling to an environment. These are different distinctions; an open quantum system may still use open-loop control.
 
-## Suggested reading order
+## 🧭 Suggested reading order
 
 1. Read P02 and the scope of P01; define a physical model and the intended task.
 2. Use P03 and QuTiP tutorials to validate uncontrolled dynamics.
@@ -50,7 +52,7 @@ Experimental closed-loop pulse optimization evaluates and updates a pulse betwee
 6. Read P12 and P13 when custom objectives or larger computational budgets justify autodiff.
 7. Read P11 for MATLAB spin simulations, or P14 for a separate feedback-control study.
 
-## Reproduction record
+## 📋 Reproduction record
 
 No paper result is claimed reproduced here. For each attempted reproduction, record the exact figure or table, paper revision, code commit, dependency lockfile, units, initial and target states, Hilbert-space truncation, controls, noise model, solver tolerances, objective convention, random seeds, restart count, evaluation budget, and hardware. Save raw results together with the plotting script and explain any differences from the paper.
 

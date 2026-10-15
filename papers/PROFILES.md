@@ -1,4 +1,4 @@
-# Detailed paper profiles
+# 📚 Detailed paper profiles
 
 [Paper map](README.md) · [Home](../README.md) · [Repositories](../repositories/README.md)
 

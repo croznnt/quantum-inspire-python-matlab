@@ -1,37 +1,41 @@
-# qutip-qtrl
+# 🎛️ qutip-qtrl
 
-[All repositories](README.md) · [Home](../README.md) · [Source](https://github.com/qutip/qutip-qtrl)
+[🧰 All repositories](README.md) · [🏠 Home](../README.md) · [🔗 Source](https://github.com/qutip/qutip-qtrl)
+
+<a href="https://github.com/qutip"><img src="https://avatars.githubusercontent.com/u/2517630?v=4" width="56" height="56" alt="qutip organization avatar"></a>
+
+![Catalog group](https://img.shields.io/badge/Group-core-2563eb?style=flat-square) ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
 
 | Field | Description |
 | :--- | :--- |
-| Upstream | [qutip/qutip-qtrl](https://github.com/qutip/qutip-qtrl) |
+| Upstream | 🎛️ [qutip/qutip-qtrl](https://github.com/qutip/qutip-qtrl) |
 | Language / ecosystem | Python |
 | Catalog category | control |
 | Download group | core |
 | Research role | Discretized pulse optimization |
 
-## What this repository contributes
+## 🎯 What this repository contributes
 
 Use GRAPE or CRAB with a QuTiP model to search for controls that improve a state or gate objective.
 
-## Suggested first exercise
+## 🧪 Suggested first exercise
 
 Optimize bounded one-qubit state transfer and compare the optimized pulse against a constant-pulse baseline.
 
 This is a proposed starting task. Consult the upstream README, examples and supported dependencies for executable instructions.
 
-## What to check
+## ✅ What to check
 
 Check time slices, gradient accuracy, amplitude bounds, initial guesses and objective conventions.
 
-## Scope and limitations
+## 🔎 Scope and limitations
 
 Older examples may import qutip.control; consult the separate qutip-qtrl package documentation.
 
-## Related literature
+## 📚 Related literature
 
 [P04](../papers/profiles/P04.md), [P06](../papers/profiles/P06.md)
 
-## Evidence and provenance
+## 🔗 Evidence and provenance
 
 The capability summary refers to the [upstream project](https://github.com/qutip/qutip-qtrl). The workflow suggestions are this catalog's editorial guidance. This profile does not claim an installation test, benchmark or paper reproduction. Read the upstream LICENSE and NOTICE at the version you use.
